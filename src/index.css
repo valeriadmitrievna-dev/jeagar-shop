@@ -12,6 +12,15 @@
 
 body {
   background: #252836;
+  color: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff;
 }
 
 a {
@@ -26,7 +35,8 @@ textarea {
   border: none;
   font-family: inherit;
 }
-button,a{
+button,
+a {
   border: none;
   outline: none;
   color: inherit;

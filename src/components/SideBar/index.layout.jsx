@@ -1,15 +1,15 @@
-import React from 'react';
-import { ReactComponent as Logo } from '../../assets/sidebar/Logo.svg';
-import { ReactComponent as Home } from '../../assets/sidebar/Home.svg';
-import { ReactComponent as LogOut } from '../../assets/sidebar/LogOut.svg';
-import { ReactComponent as Settings } from '../../assets/sidebar/Settings.svg';
-import { ReactComponent as Support } from '../../assets/sidebar/Support.svg';
-import { ReactComponent as Sales } from '../../assets/sidebar/Sales.svg';
-import { ReactComponent as Dashboard } from '../../assets/sidebar/Dashboard.svg';
-import { ReactComponent as Notifications } from '../../assets/sidebar/Notifications.svg';
+import React from "react";
+import { ReactComponent as Logo } from "../../assets/sidebar/Logo.svg";
+import { ReactComponent as Home } from "../../assets/sidebar/Home.svg";
+import { ReactComponent as LogOut } from "../../assets/sidebar/LogOut.svg";
+import { ReactComponent as Settings } from "../../assets/sidebar/Settings.svg";
+import { ReactComponent as Support } from "../../assets/sidebar/Support.svg";
+import { ReactComponent as Sales } from "../../assets/sidebar/Sales.svg";
+import { ReactComponent as Dashboard } from "../../assets/sidebar/Dashboard.svg";
+import { ReactComponent as Notifications } from "../../assets/sidebar/Notifications.svg";
 
-import * as S from './index.styled';
-import { Link } from 'react-router-dom';
+import * as S from "./index.styled";
+import { Link } from "react-router-dom";
 
 export default function SideBarLayout({
   pathname,
