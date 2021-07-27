@@ -11,37 +11,62 @@ import { ReactComponent as Notifications } from '../../assets/sidebar/Notificati
 import * as S from './index.styled';
 import { Link } from 'react-router-dom';
 
-export default function SideBarLayout({ pathname }) {
+export default function SideBarLayout({
+  pathname,
+  handleMoveItem,
+  offsetTopCursor,
+}) {
   return (
     <S.SideBarContainer>
+      <S.SideBarCursor top={offsetTopCursor}>
+        <S.SideBarCursorBcg></S.SideBarCursorBcg>
+      </S.SideBarCursor>
       <S.SidebarItemsContainer>
         <Logo />
-        <S.SideBarItem active={pathname === '/'}>
+        <S.SideBarItem
+          active={pathname === '/'}
+          onClick={(e) => handleMoveItem(e)}
+        >
           <Link to="/">
             <Home />
           </Link>
         </S.SideBarItem>
-        <S.SideBarItem active={pathname === '/sales'}>
+        <S.SideBarItem
+          active={pathname === '/sales'}
+          onClick={(e) => handleMoveItem(e)}
+        >
           <Link to="/sales">
             <Sales />
           </Link>
         </S.SideBarItem>
-        <S.SideBarItem active={pathname === '/dashboard'}>
+        <S.SideBarItem
+          active={pathname === '/dashboard'}
+          onClick={(e) => handleMoveItem(e)}
+        >
           <Link to="/dashboard">
             <Dashboard />
           </Link>
         </S.SideBarItem>
-        <S.SideBarItem active={pathname === '/support'}>
+        <S.SideBarItem
+          active={pathname === '/support'}
+          onClick={(e) => handleMoveItem(e)}
+        >
           <Link to="/support">
             <Support />
           </Link>
         </S.SideBarItem>
-        <S.SideBarItem active={pathname === '/notifications'}>
+        <S.SideBarItem
+          active={pathname === '/notifications'}
+          onClick={(e) => handleMoveItem(e)}
+        >
           <Link to="/notifications">
             <Notifications />
           </Link>
         </S.SideBarItem>
-        <S.SideBarItem active={pathname === '/settings'}>
+        <S.SideBarItem
+          active={pathname === '/settings'}
+          onClick={(e) => handleMoveItem(e)}
+        >
           <Link to="/settings">
             <Settings />
           </Link>

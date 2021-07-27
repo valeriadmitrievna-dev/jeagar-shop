@@ -35,3 +35,7 @@ button,a{
 ul {
   list-style: none;
 }
+
+::-webkit-scrollbar {
+  width: 0;
+}
