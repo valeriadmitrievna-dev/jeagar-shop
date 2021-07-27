@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/jeagar-shop/static/css/main.5d9c90cc.chunk.css",
+    "main.js": "/jeagar-shop/static/js/main.6f973e4f.chunk.js",
+    "main.js.map": "/jeagar-shop/static/js/main.6f973e4f.chunk.js.map",
+    "runtime-main.js": "/jeagar-shop/static/js/runtime-main.e791ebaf.js",
+    "runtime-main.js.map": "/jeagar-shop/static/js/runtime-main.e791ebaf.js.map",
+    "static/css/2.83a79fa7.chunk.css": "/jeagar-shop/static/css/2.83a79fa7.chunk.css",
+    "static/js/2.6cf004ab.chunk.js": "/jeagar-shop/static/js/2.6cf004ab.chunk.js",
+    "static/js/2.6cf004ab.chunk.js.map": "/jeagar-shop/static/js/2.6cf004ab.chunk.js.map",
+    "index.html": "/jeagar-shop/index.html",
+    "static/css/2.83a79fa7.chunk.css.map": "/jeagar-shop/static/css/2.83a79fa7.chunk.css.map",
+    "static/css/main.5d9c90cc.chunk.css.map": "/jeagar-shop/static/css/main.5d9c90cc.chunk.css.map",
+    "static/js/2.6cf004ab.chunk.js.LICENSE.txt": "/jeagar-shop/static/js/2.6cf004ab.chunk.js.LICENSE.txt",
+    "static/media/Dashboard.adb50030.svg": "/jeagar-shop/static/media/Dashboard.adb50030.svg",
+    "static/media/Home.95493d50.svg": "/jeagar-shop/static/media/Home.95493d50.svg",
+    "static/media/Image 1.1d304750.png": "/jeagar-shop/static/media/Image 1.1d304750.png",
+    "static/media/Image 2.5cdedce0.png": "/jeagar-shop/static/media/Image 2.5cdedce0.png",
+    "static/media/Image 3.b37f6bec.png": "/jeagar-shop/static/media/Image 3.b37f6bec.png",
+    "static/media/Image 5.c190bd87.png": "/jeagar-shop/static/media/Image 5.c190bd87.png",
+    "static/media/Image 6.45f2231c.png": "/jeagar-shop/static/media/Image 6.45f2231c.png",
+    "static/media/LogOut.49ca816c.svg": "/jeagar-shop/static/media/LogOut.49ca816c.svg",
+    "static/media/Logo.8710ae77.svg": "/jeagar-shop/static/media/Logo.8710ae77.svg",
+    "static/media/Notifications.db25c574.svg": "/jeagar-shop/static/media/Notifications.db25c574.svg",
+    "static/media/Sales.823f2a5f.svg": "/jeagar-shop/static/media/Sales.823f2a5f.svg",
+    "static/media/Settings.bb53b96e.svg": "/jeagar-shop/static/media/Settings.bb53b96e.svg",
+    "static/media/Support.ee7bb989.svg": "/jeagar-shop/static/media/Support.ee7bb989.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e791ebaf.js",
+    "static/css/2.83a79fa7.chunk.css",
+    "static/js/2.6cf004ab.chunk.js",
+    "static/css/main.5d9c90cc.chunk.css",
+    "static/js/main.6f973e4f.chunk.js"
+  ]
+}
