@@ -6,7 +6,7 @@ export const PxToVw = (px, screen = 1194) => {
 
 export const MainLayout = styled.div`
   display: grid;
-  grid-template-columns: 9% 1fr;
+  grid-template-columns: 7% 1fr;
 `;
 
 export const MainContainer = styled.div`
