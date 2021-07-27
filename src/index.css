@@ -26,7 +26,12 @@ textarea {
   border: none;
   font-family: inherit;
 }
-
+button,a{
+  border: none;
+  outline: none;
+  color: inherit;
+  font-family: inherit;
+}
 ul {
   list-style: none;
 }
