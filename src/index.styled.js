@@ -80,6 +80,7 @@ export const PageTitle = styled.div`
     font-size: ${PxToVw(16)};
     line-height: 140%;
     color: #e0e6e9;
+    margin: 0;
   }
 `;
 

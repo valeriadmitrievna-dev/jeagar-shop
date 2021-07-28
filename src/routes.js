@@ -1,5 +1,6 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
 import Home from './pages/Home/index';
 
 export const useRoutes = (isAuth) => {
@@ -13,7 +14,7 @@ export const useRoutes = (isAuth) => {
       </Route>
 
       <Route path="/dashboard" exact>
-        dashboard
+        <Dashboard />
       </Route>
       <Route path="/support" exact>
         support page
