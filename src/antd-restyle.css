@@ -98,15 +98,119 @@
   font-size: 1.50754vw;
 }
 
-.ant-message-notice-content {
-  display: inline-block;
+.ant-message-notice-content,
+.ant-notification-notice {
   padding: 0.83752vw 1.34003vw;
   background: #171620;
   border-radius: 0.1675vw;
   max-width: 90%;
+  color: #fff;
+  text-align: justify;
 }
 
-.ant-message-error svg path {
+.ant-message-notice-content *,
+.ant-notification-notice * {
+  color: #fff;
+}
+
+.ant-notification-notice-closable .ant-notification-notice-message {
+  padding-right: 32px;
+}
+
+.ant-message-error svg path,
+.ant-notification-notice-icon-error svg path {
   fill: #ff4d4f;
+}
+
+.ant-message-success svg path,
+.ant-notification-notice-icon-success svg path {
+  fill: #7fff4d;
+}
+
+.ant-drawer-content {
+  background: #1f1d2b;
+  border-radius: 0.67002vw 0 0 0.67002vw;
+}
+
+.ant-drawer-body {
+  background: #1f1d2b;
+  border-radius: 0.67002vw 0 0 0.67002vw;
+  padding: 2.01005vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.ant-picker {
+  display: block;
+  padding: 1.17253vw;
+  background: #2d303e;
+  border: 0.08375vw solid #393c49;
+  border-radius: 0.67002vw;
+  font-weight: 500;
+  font-size: 1.34003vw;
+  line-height: 140%;
+  color: #fff;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.ant-picker .ant-picker-suffix {
+  display: none;
+}
+
+.ant-picker:hover,
+.ant-picker-focused {
+  border-color: #393c49;
+}
+
+.ant-picker-input > input {
+  padding: 0;
+  color: #fff;
+  font-size: 1.17253vw;
+  line-height: 140%;
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  border-radius: none;
+  letter-spacing: 0.03em;
+}
+
+.ant-picker-panel-container {
+  overflow: hidden;
+  vertical-align: top;
+  background: #2d303e;
+  border-radius: 0.67002vw;
+}
+
+.ant-picker-panel-container * {
+  color: #fff !important;
+}
+
+.ant-picker-panel-container .ant-picker-cell-in-view.ant-picker-cell-today
+.ant-picker-cell-inner::before {
+  border: none;
+  background-color: transparent;
+}
+
+.ant-picker-cell:hover:not(.ant-picker-cell-in-view) .ant-picker-cell-inner,
+.ant-picker-cell:hover:not(.ant-picker-cell-selected):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end):not(.ant-picker-cell-range-hover-start):not(.ant-picker-cell-range-hover-end)
+.ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.ant-picker-panel {
+  border: none;
+}
+
+.ant-picker-header {
+  border-bottom: 0.08375vw solid #9c9cab;
 }
 /*# sourceMappingURL=antd-restyle.css.map */

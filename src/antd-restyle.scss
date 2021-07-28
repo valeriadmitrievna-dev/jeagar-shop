@@ -86,15 +86,100 @@ $screen-width: 1194;
   margin-right: px-to-vw(8);
   font-size: px-to-vw(18);
 }
-.ant-message-notice-content {
-  display: inline-block;
+.ant-message-notice-content,
+.ant-notification-notice {
   padding: px-to-vw(10) px-to-vw(16);
   background: #171620;
   border-radius: px-to-vw(2);
   max-width: 90%;
+  color: #fff;
+  * {
+    color: #fff;
+  }
+  text-align: justify;
 }
-.ant-message-error {
+.ant-notification-notice-closable .ant-notification-notice-message {
+    padding-right: 32px;
+}
+.ant-message-error,
+.ant-notification-notice-icon-error {
   svg path {
     fill: #ff4d4f;
   }
+}
+.ant-message-success,
+.ant-notification-notice-icon-success {
+  svg path {
+    fill: #7fff4d;
+  }
+}
+.ant-drawer-content {
+  background: #1f1d2b;
+  border-radius: px-to-vw(8) 0 0 px-to-vw(8);
+}
+.ant-drawer-body {
+  background: #1f1d2b;
+  border-radius: px-to-vw(8) 0 0 px-to-vw(8);
+  padding: px-to-vw(24);
+  display: flex;
+  flex-direction: column;
+}
+
+.ant-picker {
+  display: block;
+  padding: px-to-vw(14);
+  background: #2d303e;
+  border: px-to-vw(1) solid #393c49;
+  border-radius: px-to-vw(8);
+  font-weight: 500;
+  font-size: px-to-vw(16);
+  line-height: 140%;
+  color: #fff;
+  box-shadow: none !important;
+  .ant-picker-suffix {
+    display: none;
+  }
+}
+.ant-picker:hover,
+.ant-picker-focused {
+  border-color: #393c49;
+}
+.ant-picker-input > input {
+  padding: 0;
+  color: #fff;
+  font-size: px-to-vw(14);
+  line-height: 140%;
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  border-radius: none;
+  letter-spacing: 0.03em;
+}
+.ant-picker-panel-container {
+  overflow: hidden;
+  vertical-align: top;
+  background: #2d303e;
+  border-radius: px-to-vw(8);
+  * {
+    color: #fff !important;
+  }
+  .ant-picker-cell-in-view.ant-picker-cell-today
+    .ant-picker-cell-inner::before {
+    border: none;
+    background-color: transparent;
+  }
+}
+.ant-picker-cell:hover:not(.ant-picker-cell-in-view) .ant-picker-cell-inner,
+.ant-picker-cell:hover:not(.ant-picker-cell-selected):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end):not(.ant-picker-cell-range-hover-start):not(.ant-picker-cell-range-hover-end)
+  .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner {
+  background: rgba(255, 255, 255, 0.1);
+}
+.ant-picker-panel {
+  border: none;
+}
+.ant-picker-header {
+  border-bottom: px-to-vw(1) solid #9c9cab;
 }
