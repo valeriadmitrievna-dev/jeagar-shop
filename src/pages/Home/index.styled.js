@@ -65,14 +65,18 @@ export const HomeNavItem = styled.div`
 
 export const HomeContentHeader = styled.div`
   font-weight: 600;
-  font-size: 20px;
+  font-size: ${PxToVw(20)};
   line-height: 140%;
   margin-bottom: ${PxToVw(58)};
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 export const HomeContentDishes = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, ${PxToVw(188)});
+  grid-template-columns: ${({ drawer }) =>
+    drawer ? "1fr 1fr 1fr" : "1fr 1fr 1fr 1fr 1fr"};
   row-gap: ${PxToVw(58)};
   column-gap: ${PxToVw(28)};
   transition: 0.3s;
@@ -121,5 +125,79 @@ export const DishCard = styled.div`
   p {
     color: #abbbc2;
     margin: 0;
+  }
+`;
+
+export const DrawerOrderTypes = styled.div`
+  display: flex;
+  align-items: stretch;
+  gap: ${PxToVw(8)};
+`;
+export const DrawerOrderType = styled.div`
+  padding: ${PxToVw(7)} ${PxToVw(12)};
+  background: #1f1d2b;
+  border: ${PxToVw(1)} solid #393c49;
+  border-radius: ${PxToVw(8)};
+  font-weight: 600;
+  font-size: ${PxToVw(14)};
+  line-height: 140%;
+  color: #ea7c69;
+  text-transform: capitalize;
+  cursor: pointer;
+  ${({ active }) =>
+    active &&
+    `
+    background: #ea7c69;
+    color: #fff;
+    border: ${PxToVw(1)} solid #ea7c69;
+  `}
+`;
+export const DrawerOrderItemsHeader = styled.div`
+  display: grid;
+  grid-template-columns: 1fr ${PxToVw(48)} ${PxToVw(48)};
+  gap: ${PxToVw(16)};
+  padding: ${PxToVw(24)} 0;
+  span {
+    font-weight: 600;
+    font-size: ${PxToVw(16)};
+    line-height: 140%;
+    text-transform: capitalize;
+  }
+`;
+export const DrawerOrderList = styled.div`
+  border-bottom: ${PxToVw(1)} solid #393c49;
+  border-top: ${PxToVw(1)} solid #393c49;
+  padding: ${PxToVw(24)} 0;
+  flex-grow: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: ${PxToVw(24)};
+`;
+export const OrderedDishItem = styled.div`
+  display: grid;
+`;
+export const DrawerOrderCostInfo = styled.div`
+  margin-top: ${PxToVw(24)};
+  margin-bottom: ${PxToVw(42)};
+  display: flex;
+  flex-direction: column;
+  gap: ${PxToVw(16)};
+  > div {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    span {
+      font-size: ${PxToVw(14)};
+      line-height: 140%;
+      color: #abbbc2;
+    }
+    b {
+      font-weight: 500;
+      font-size: ${PxToVw(16)};
+      line-height: 140%;
+      text-align: right;
+      color: #ffffff;
+    }
   }
 `;

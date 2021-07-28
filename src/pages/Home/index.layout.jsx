@@ -2,20 +2,23 @@ import { format } from "date-fns";
 import React from "react";
 import * as I from "../../index.styled";
 import * as H from "./index.styled";
-import { all_dishes, menu_tabs } from "./../../constants/home";
-import { Drawer } from "antd";
-import { PxToVw } from "./../../index.styled";
+import { all_dishes, menu_tabs, order_types } from "./../../constants/home";
+import { Select } from "antd";
+import { ReactComponent as Arrow } from "../../assets/arrow-ios-down.svg";
+import OrderDrawer from "./../../components/OrderDrawer/index";
 
 export default function HomeLayout({
   activeTab,
   handleSetActiveTab,
   activeTabLine,
-  drawer,
-  handleShowDrawer,
-  handleCloseDrawer,
+  order,
+  setOrder,
+  discount,
+  handleSetOrder,
+  handleSetOrderType,
 }) {
   return (
-    <I.MainContainer drawer={drawer}>
+    <I.MainContainer drawer={order.orderList.length > 0}>
       <div>
         <I.PageHeader>
           <I.PageTitle>
@@ -35,12 +38,27 @@ export default function HomeLayout({
             </H.HomeNavItem>
           ))}
         </H.HomeNav>
-        <H.HomeContentHeader>Choose dishes</H.HomeContentHeader>
-        <H.HomeContentDishes drawer={drawer}>
+        <H.HomeContentHeader>
+          Choose dishes
+          <Select
+            defaultValue={order.type}
+            value={order.type}
+            onChange={(e) => handleSetOrderType(e)}
+            showArrow={true}
+            suffixIcon={<Arrow />}
+          >
+            {order_types.map((type, id) => (
+              <Select.Option key={id} value={type}>
+                {type}
+              </Select.Option>
+            ))}
+          </Select>
+        </H.HomeContentHeader>
+        <H.HomeContentDishes drawer={order.orderList.length > 0}>
           {all_dishes
             .filter((dish) => dish.category === menu_tabs[activeTab])
             .map((dish, id) => (
-              <H.DishCard key={id} onClick={handleShowDrawer}>
+              <H.DishCard key={id} onClick={() => handleSetOrder(dish)}>
                 <img src={dish.cover} alt="" />
                 <h5>{dish.title}</h5>
                 <span>$ {dish.price}</span>
@@ -49,10 +67,13 @@ export default function HomeLayout({
             ))}
         </H.HomeContentDishes>
       </div>
-      <I.StaticDrawer drawer={drawer}>
-        drawer
-        <button onClick={handleCloseDrawer}>close</button>
-      </I.StaticDrawer>
+      <OrderDrawer
+        order={order}
+        setOrder={setOrder}
+        order_types={order_types}
+        discount={discount}
+        handleSetOrderType={handleSetOrderType}
+      />
     </I.MainContainer>
   );
 }

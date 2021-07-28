@@ -1,23 +1,52 @@
 import React, { useState } from "react";
+import { order_types } from "../../constants/home";
 import HomeLayout from "./index.layout";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState(0);
-  const [dishToShow, setDishToShow] = useState({});
-  const [drawer, setDrawer] = useState(false);
+  const discount = 0;
+  const [order, setOrder] = useState({
+    number: Math.floor(Math.random() * 100000),
+    orderList: [],
+    type: order_types[0],
+  });
   const [activeTabLine, setActiveTabLine] = useState(0);
   const handleSetActiveTab = (e, id) => {
     setActiveTabLine({
-        left: e.target.offsetLeft,
-        width: e.target.offsetWidth
+      left: e.target.offsetLeft,
+      width: e.target.offsetWidth,
     });
     setActiveTab(id);
   };
-  const handleShowDrawer = () => {
-    setDrawer(true);
+  const handleSetOrder = (dish) => {
+    const candidateDish = order.orderList.find((d) => d.title === dish.title);
+    if (candidateDish) {
+      setOrder((prop) => {
+        return {
+          ...prop,
+          orderList: order.orderList.map((d) => {
+            if (d.title === candidateDish.title) {
+              d.count = d.count + 1;
+            }
+            return d;
+          }),
+        };
+      });
+    } else
+      setOrder((prop) => {
+        return {
+          ...prop,
+          orderList: [...order.orderList, dish],
+        };
+      });
   };
-  const handleCloseDrawer = () => {
-    setDrawer(false);
+  const handleSetOrderType = (type) => {
+    setOrder((prop) => {
+      return {
+        ...prop,
+        type,
+      };
+    });
   };
 
   return (
@@ -25,9 +54,11 @@ export default function Home() {
       activeTab={activeTab}
       handleSetActiveTab={handleSetActiveTab}
       activeTabLine={activeTabLine}
-      drawer={drawer}
-      handleShowDrawer={handleShowDrawer}
-      handleCloseDrawer={handleCloseDrawer}
+      order={order}
+      setOrder={setOrder}
+      discount={discount}
+      handleSetOrder={handleSetOrder}
+      handleSetOrderType={handleSetOrderType}
     />
   );
 }

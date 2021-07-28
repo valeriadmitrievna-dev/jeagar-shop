@@ -1,0 +1,100 @@
+$screen-width: 1194;
+@function px-to-vw($value) {
+  @return ($value * 100) / $screen-width + vw;
+}
+
+.ant-select {
+  color: rgb(255, 255, 255);
+  font-size: px-to-vw(14);
+  &:not(.ant-select-customize-input) {
+    .ant-select-selector {
+      background-color: #1f1d2b;
+      border: px-to-vw(1) solid #393c49;
+      box-sizing: border-box;
+      border-radius: px-to-vw(8);
+      padding: px-to-vw(14);
+      .ant-select-selection-item {
+        line-height: 1.4;
+        text-transform: capitalize;
+      }
+    }
+  }
+  &:not(.ant-select-disabled):hover .ant-select-selector {
+    border-color: #393c49;
+    border-right-width: px-to-vw(1) !important;
+  }
+  &-focused:not(.ant-select-customize-input).ant-select:not(.ant-select-disabled)
+    .ant-select-selector {
+    border-color: #393c49;
+    box-shadow: none;
+  }
+}
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+  height: px-to-vw(48);
+  width: px-to-vw(110);
+}
+.ant-select-single.ant-select-show-arrow .ant-select-selection-item,
+.ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
+  padding-right: 0;
+  padding-left: px-to-vw(20);
+}
+.ant-select-arrow {
+  right: auto;
+  left: px-to-vw(11);
+  width: px-to-vw(20);
+  height: px-to-vw(20);
+  margin-top: 0;
+  transform: translateY(-45%);
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+.ant-select-dropdown {
+  color: #fff;
+  line-height: 1.5715;
+  z-index: 1050;
+  padding: px-to-vw(4) 0;
+  font-size: px-to-vw(13);
+  background-color: #1f1d2b;
+  border: px-to-vw(1) solid #393c49;
+  border-radius: px-to-vw(8);
+  width: fit-content !important;
+}
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  color: #fff;
+  background-color: #171620;
+}
+.ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+  background-color: #1e1c29;
+}
+.ant-select-item {
+  min-height: px-to-vw(32);
+  padding: px-to-vw(5) px-to-vw(12);
+  color: #fff;
+  font-weight: normal;
+  font-size: px-to-vw(14);
+  line-height: px-to-vw(22);
+  text-transform: capitalize;
+}
+.ant-message {
+  font-size: px-to-vw(16);
+  top: px-to-vw(8);
+}
+.ant-message .anticon {
+  top: 0;
+  margin-right: px-to-vw(8);
+  font-size: px-to-vw(18);
+}
+.ant-message-notice-content {
+  display: inline-block;
+  padding: px-to-vw(10) px-to-vw(16);
+  background: #171620;
+  border-radius: px-to-vw(2);
+  max-width: 90%;
+}
+.ant-message-error {
+  svg path {
+    fill: #ff4d4f;
+  }
+}

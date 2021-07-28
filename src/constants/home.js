@@ -400,7 +400,10 @@ const dishes = [
   },
 ];
 
+export const order_types = ["dine in", "to go", "delivery"];
+
 export const all_dishes = dishes.map((dish) => {
   dish.category = menu_tabs[Math.floor(Math.random() * menu_tabs.length)];
+  dish.count = 1;
   return dish;
 });

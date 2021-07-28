@@ -15,12 +15,12 @@ export const MainContainer = styled.div`
   height: 100vh;
   overflow-y: auto;
   &::-webkit-scrollbar {
-    width: 10px;
+    width: 3px;
     background-color: #1f1d2b;
   }
   &::-webkit-scrollbar-thumb {
     background-color: #ea7c69;
-    border-radius: 5px;
+    border-radius: 2px;
   }
   > div:first-of-type {
     transition: 0.3s;
@@ -30,7 +30,7 @@ export const MainContainer = styled.div`
     drawer &&
     `
   > div:first-of-type {
-    width: calc(100% - ${PxToVw(420)});
+    width: calc(100% - ${PxToVw(442)});
   }
   `}
 `;
@@ -45,6 +45,15 @@ export const StaticDrawer = styled.div`
   border-radius: ${PxToVw(8)} 0 0 ${PxToVw(8)};
   padding: ${PxToVw(24)};
   right: ${({ drawer }) => (drawer ? 0 : PxToVw(-440))};
+  display: flex;
+  flex-direction: column;
+`;
+
+export const StaticDrawerTitle = styled.h4`
+  font-weight: 600;
+  font-size: ${PxToVw(20)};
+  line-height: 140%;
+  margin-bottom: ${PxToVw(24)};
 `;
 
 export const PageHeader = styled.div`
@@ -71,5 +80,21 @@ export const PageTitle = styled.div`
     font-size: ${PxToVw(16)};
     line-height: 140%;
     color: #e0e6e9;
+  }
+`;
+
+export const OrangeButton = styled.button`
+  display: block;
+  padding: ${PxToVw(14)};
+  background: #ea7c69;
+  border-radius: ${PxToVw(8)};
+  transition: 0.3s;
+  font-weight: 600;
+  font-size: ${PxToVw(14)};
+  line-height: 140%;
+  color: #fafafa;
+  width: 100%;
+  &:hover {
+    box-shadow: 0 ${PxToVw(8)} ${PxToVw(24)} rgba(234, 124, 105, 0.3);
   }
 `;

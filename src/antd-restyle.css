@@ -1,0 +1,112 @@
+.ant-select {
+  color: white;
+  font-size: 1.17253vw;
+}
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  background-color: #1f1d2b;
+  border: 0.08375vw solid #393c49;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 0.67002vw;
+  padding: 1.17253vw;
+}
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-item {
+  line-height: 1.4;
+  text-transform: capitalize;
+}
+
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border-color: #393c49;
+  border-right-width: 0.08375vw !important;
+}
+
+.ant-select-focused:not(.ant-select-customize-input).ant-select:not(.ant-select-disabled) .ant-select-selector {
+  border-color: #393c49;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+  height: 4.0201vw;
+  width: 9.21273vw;
+}
+
+.ant-select-single.ant-select-show-arrow .ant-select-selection-item,
+.ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
+  padding-right: 0;
+  padding-left: 1.67504vw;
+}
+
+.ant-select-arrow {
+  right: auto;
+  left: 0.92127vw;
+  width: 1.67504vw;
+  height: 1.67504vw;
+  margin-top: 0;
+  -webkit-transform: translateY(-45%);
+          transform: translateY(-45%);
+}
+
+.ant-select-arrow svg {
+  width: 100%;
+  height: 100%;
+}
+
+.ant-select-dropdown {
+  color: #fff;
+  line-height: 1.5715;
+  z-index: 1050;
+  padding: 0.33501vw 0;
+  font-size: 1.08878vw;
+  background-color: #1f1d2b;
+  border: 0.08375vw solid #393c49;
+  border-radius: 0.67002vw;
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+}
+
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  color: #fff;
+  background-color: #171620;
+}
+
+.ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+  background-color: #1e1c29;
+}
+
+.ant-select-item {
+  min-height: 2.68007vw;
+  padding: 0.41876vw 1.00503vw;
+  color: #fff;
+  font-weight: normal;
+  font-size: 1.17253vw;
+  line-height: 1.84255vw;
+  text-transform: capitalize;
+}
+
+.ant-message {
+  font-size: 1.34003vw;
+  top: 0.67002vw;
+}
+
+.ant-message .anticon {
+  top: 0;
+  margin-right: 0.67002vw;
+  font-size: 1.50754vw;
+}
+
+.ant-message-notice-content {
+  display: inline-block;
+  padding: 0.83752vw 1.34003vw;
+  background: #171620;
+  border-radius: 0.1675vw;
+  max-width: 90%;
+}
+
+.ant-message-error svg path {
+  fill: #ff4d4f;
+}
+/*# sourceMappingURL=antd-restyle.css.map */
