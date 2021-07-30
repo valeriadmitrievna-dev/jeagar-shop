@@ -65,6 +65,10 @@ $screen-width: 1194;
   color: #fff;
   background-color: #171620;
 }
+.ant-select-item-option:hover {
+  color: #fff;
+  background-color: #14141d !important;
+}
 .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
   background-color: #1e1c29;
 }

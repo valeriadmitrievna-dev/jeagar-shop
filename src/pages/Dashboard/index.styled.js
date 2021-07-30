@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { PxToVw } from '../../index.styled';
+import styled from "styled-components";
+import { PxToVw } from "../../index.styled";
 
 export const DashboardContainer = styled.div`
   display: flex;
@@ -38,7 +38,7 @@ export const DashboardInfoCard = styled.div`
   }
 `;
 export const InfoCardPercent = styled.div`
-  color: ${({ positive }) => (positive ? '#50D1AA' : '#FF7CA3')};
+  color: ${({ positive }) => (positive ? "#50D1AA" : "#FF7CA3")};
   display: flex;
   align-items: center;
   column-gap: ${PxToVw(12)};
@@ -56,23 +56,23 @@ export const InfoCardPercent = styled.div`
     margin-left: ${PxToVw(-4)};
     &::before {
       position: absolute;
-      content: '';
+      content: "";
       left: center;
       right: center;
       width: ${PxToVw(18)};
       height: ${PxToVw(18)};
       z-index: 0;
       background-color: ${({ positive }) =>
-        positive ? 'rgba(136, 224, 145, 0.24)' : 'rgba(255, 100, 113, 0.24)'};
+        positive ? "rgba(136, 224, 145, 0.24)" : "rgba(255, 100, 113, 0.24)"};
       border-radius: 50%;
     }
     svg {
       width: ${PxToVw(12)};
       height: ${PxToVw(12)};
       transform: ${({ positive }) =>
-        positive ? 'rotate(0deg)' : 'rotate(180deg)'};
+        positive ? "rotate(0deg)" : "rotate(180deg)"};
       path {
-        fill: ${({ positive }) => (positive ? '#50D1AA' : '#FF7CA3')};
+        fill: ${({ positive }) => (positive ? "#50D1AA" : "#FF7CA3")};
       }
     }
   }
@@ -103,7 +103,7 @@ export const OrderReportContentTitle = styled.div`
 
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     bottom: 0;
     height: ${PxToVw(1)};
     background-color: #393c49;
@@ -132,17 +132,17 @@ export const OrderReportitem = styled.div`
       border-radius: ${PxToVw(30)};
       text-transform: capitalize;
       ${({ status }) => {
-        if (status === 'pending') {
-          return 'background-color: rgba(255, 181, 114, 0.2); color: #FFB572;';
+        if (status === "pending") {
+          return "background-color: rgba(255, 181, 114, 0.2); color: #FFB572;";
         }
-        if (status === 'completed') {
-          return 'background-color: rgba(107, 226, 190, 0.24); color:#50D1AA;';
+        if (status === "completed") {
+          return "background-color: rgba(107, 226, 190, 0.24); color:#50D1AA;";
         }
-        if (status === 'canceled') {
-          return 'background-color: rgba(168, 78, 50, 0.24); color:#db481a';
+        if (status === "canceled") {
+          return "background-color: rgba(168, 78, 50, 0.24); color:#db481a";
         }
-        if (status === 'preparing') {
-          return 'background-color:  rgba(146, 144, 254, 0.2); color: #9290FE;';
+        if (status === "preparing") {
+          return "background-color:  rgba(146, 144, 254, 0.2); color: #9290FE;";
         }
       }}
     }
@@ -185,7 +185,7 @@ export const MostOrderedTitle = styled.div`
   font-weight: 600;
   line-height: 200%;
   border-bottom: ${PxToVw(1)} solid #393c49;
-  padding-bottom: ${PxToVw(24)};
+  padding-bottom: ${PxToVw(16)};
   margin-bottom: ${PxToVw(20)};
   display: flex;
   justify-content: space-between;
@@ -256,8 +256,50 @@ export const MostTypeOrderTitle = styled.div`
   border-bottom: ${PxToVw(1)} solid #393c49;
   font-size: ${PxToVw(20)};
   font-weight: 600;
-  padding-bottom: ${PxToVw(24)};
+  padding-bottom: ${PxToVw(16)};
+  margin-bottom: ${PxToVw(24)};
   display: flex;
   justify-content: space-between;
   align-items: center;
+`;
+
+export const MostTypeOrderBody = styled.div`
+  display: flex;
+  align-items: center;
+  gap: ${PxToVw(48)};
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: ${PxToVw(16)};
+  }
+  svg {
+    height: ${PxToVw(170)};
+    width: ${PxToVw(170)};
+  }
+`;
+
+export const MostTypeOrderNote = styled.li`
+  p {
+    font-weight: 500;
+    font-size: ${PxToVw(14)};
+    line-height: 130%;
+    margin-bottom: ${PxToVw(2)};
+    text-transform: capitalize;
+  }
+  span {
+    font-size: ${PxToVw(12)};
+    line-height: 140%;
+    color: #abbbc2;
+  }
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: ${PxToVw(18)};
+    height: ${PxToVw(18)};
+    left: ${PxToVw(-27)};
+    top: ${PxToVw(1)};
+    border-radius: 50%;
+    background-color: ${({ color }) => color};
+  }
 `;
