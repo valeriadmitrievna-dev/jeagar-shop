@@ -213,4 +213,16 @@
 .ant-picker-header {
   border-bottom: 0.08375vw solid #9c9cab;
 }
+
+.ant-select.filter-button .ant-select-selector {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 /*# sourceMappingURL=antd-restyle.css.map */

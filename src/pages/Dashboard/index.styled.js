@@ -90,6 +90,8 @@ export const OrderReportTitle = styled.div`
   font-size: ${PxToVw(20)};
   font-weight: 600;
   margin-bottom: ${PxToVw(20)};
+  display: flex;
+  justify-content: space-between;
 `;
 export const OrderReportContentTitle = styled.div`
   display: grid;
@@ -112,7 +114,7 @@ export const OrderReportitem = styled.div`
   display: grid;
   grid-template-columns: 1.3fr 1fr 1fr 0.7fr;
   margin-bottom: ${PxToVw(24)};
-  &:last-of-type{
+  &:last-of-type {
     margin: 0;
   }
   p {
@@ -152,6 +154,13 @@ export const OrderReportitemName = styled.div`
   align-items: center;
   column-gap: ${PxToVw(14)};
   font-size: ${PxToVw(14)};
+  span {
+    text-transform: capitalize;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    width: ${PxToVw(130)};
+  }
   img {
     width: ${PxToVw(32)};
     height: ${PxToVw(32)};
@@ -178,6 +187,8 @@ export const MostOrderedTitle = styled.div`
   border-bottom: ${PxToVw(1)} solid #393c49;
   padding-bottom: ${PxToVw(24)};
   margin-bottom: ${PxToVw(20)};
+  display: flex;
+  justify-content: space-between;
 `;
 export const MostOrderedContent = styled.div`
   display: flex;
@@ -188,6 +199,7 @@ export const MostOrderedContent = styled.div`
 export const MostOrderedItem = styled.div`
   display: flex;
   gap: ${PxToVw(16)};
+
   img {
     display: block;
     width: ${PxToVw(54)};
@@ -198,10 +210,17 @@ export const MostOrderedItemText = styled.div`
   display: flex;
   flex-direction: column;
   h1 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    width: ${PxToVw(240)};
     margin-top: ${PxToVw(3)};
     font-size: ${PxToVw(14)};
     line-height: 130%;
     color: #e0e6e9;
+    &::first-letter {
+      text-transform: uppercase;
+    }
   }
   p {
     font-size: ${PxToVw(12)};
@@ -234,9 +253,11 @@ export const DashboardMostTypeOrder = styled.div`
   padding: ${PxToVw(24)};
 `;
 export const MostTypeOrderTitle = styled.div`
-border-bottom: ${PxToVw(1)} solid #393C49;
-font-size: ${PxToVw(20)};
-font-weight: 600; 
-padding-bottom: ${PxToVw(24)};
-
-`
+  border-bottom: ${PxToVw(1)} solid #393c49;
+  font-size: ${PxToVw(20)};
+  font-weight: 600;
+  padding-bottom: ${PxToVw(24)};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;

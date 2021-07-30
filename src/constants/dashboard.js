@@ -12,7 +12,7 @@ import Avatar5 from '../assets/dashboard/Avatar5.svg';
 export const most_ordered = [
   {
     cover: Meal1,
-    title: 'Spicy seasoned seafood noodles',
+    title: 'Spicy seasoned seafood noodles seasoned seafood noodles seasoned seafood noodles',
     ordered: 200,
   },
   {
@@ -70,14 +70,14 @@ export const info_card = [
 export const order_report = [
   {
     cover: Avatar1,
-    name: 'Eren Jaegar',
+    name: 'eren Jaegarfgdfgdfgdfgdfgdfgdfgdfgdfgdfgfdg',
     date: new Date('December 17, 2020 03:24:00'),
     payment: 125,
     status: 'completed',
   },
   {
     cover: Avatar2,
-    name: 'Reiner Braunn',
+    name: 'Reiner Braunn dfg dfgdf gdfg dfg dfg fdg dfg dfgdfg df g',
     date: new Date('December 17, 2020 03:24:00'),
     payment: 13,
     status: 'preparing',

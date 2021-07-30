@@ -183,3 +183,10 @@ $screen-width: 1194;
 .ant-picker-header {
   border-bottom: px-to-vw(1) solid #9c9cab;
 }
+.ant-select.filter-button{
+ .ant-select-selector{
+   width: fit-content;
+   display: flex;
+   align-items: center;
+ }
+}
