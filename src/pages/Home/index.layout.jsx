@@ -60,9 +60,13 @@ export default function HomeLayout({
             .map((dish, id) => (
               <H.DishCard key={id} onClick={() => handleSetOrder(dish)}>
                 <img src={dish.cover} alt="" />
+                <H.DishCardContainer>
                 <h5>{dish.title}</h5>
-                <span>$ {dish.price}</span>
+                <h2>$ {dish.price}</h2>
                 <p>{dish.available} Bowls available</p>
+                <h3>{dish.description}</h3>
+                <h4>Calories: {dish.calories}</h4>
+                </H.DishCardContainer>
               </H.DishCard>
             ))}
         </H.HomeContentDishes>
