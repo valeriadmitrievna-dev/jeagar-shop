@@ -6,7 +6,7 @@ import OrderDrawerLayout from "./index.layout";
 export default function OrderDrawer({
   order,
   setOrder,
-  order_types,
+  orderTypes,
   discount,
   handleSetOrderType,
 }) {
@@ -210,7 +210,7 @@ export default function OrderDrawer({
     <OrderDrawerLayout
       order={order}
       setOrder={setOrder}
-      order_types={order_types}
+      orderTypes={orderTypes}
       discount={discount}
       handleSetOrderType={handleSetOrderType}
       handleChangeOrderItemCount={handleChangeOrderItemCount}

@@ -1,14 +1,15 @@
-import React, { useState } from "react";
-import { order_types } from "../../constants/home";
-import HomeLayout from "./index.layout";
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import HomeLayout from './index.layout';
 
 export default function Home() {
+  const { dishes, orderTypes, menuTabs } = useSelector((state) => state.home);
   const [activeTab, setActiveTab] = useState(0);
   const discount = 0;
   const [order, setOrder] = useState({
     number: Math.floor(Math.random() * 100000),
     orderList: [],
-    type: order_types[0],
+    type: orderTypes[0],
   });
   const [activeTabLine, setActiveTabLine] = useState(0);
   const handleSetActiveTab = (e, id) => {
@@ -24,6 +25,7 @@ export default function Home() {
       setOrder((prop) => {
         return {
           ...prop,
+
           orderList: order.orderList.map((d) => {
             if (d.title === candidateDish.title) {
               d.count = d.count + 1;
@@ -51,6 +53,9 @@ export default function Home() {
 
   return (
     <HomeLayout
+      menuTabs={menuTabs}
+      orderTypes={orderTypes}
+      dishes={dishes}
       activeTab={activeTab}
       handleSetActiveTab={handleSetActiveTab}
       activeTabLine={activeTabLine}

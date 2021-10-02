@@ -17,7 +17,7 @@ export const DashboardLeftScrollContainer = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: ${PxToVw(143)} 1fr;
   gap: ${PxToVw(24)};
-  overflow-y: auto;
+  overflow-y: auto; 
 `;
 export const DashboardInfoCard = styled.div`
   background-color: #1f1d2b;

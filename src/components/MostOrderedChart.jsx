@@ -1,11 +1,11 @@
 import { Tooltip } from "antd";
 import React from "react";
 
-export default function MostOrderedChart({ most_ordered_chart }) {
-  const max = Math.max(...most_ordered_chart?.map((bar) => bar.count));
+export default function MostOrderedChart({ mostOrderedChart }) {
+  const max = Math.max(...mostOrderedChart?.map((bar) => bar.count));
   const counter = 10 ** (max.toString().split("").length - 1);
   //   const total = Math.ceil(max / counter) * counter * 1.1;
-  const total = most_ordered_chart
+  const total = mostOrderedChart
     .map((bar) => bar.count)
     .reduce((a, b) => a + b);
   return (
@@ -15,7 +15,7 @@ export default function MostOrderedChart({ most_ordered_chart }) {
       viewBox="0 0 42 42"
       className="most-ordered-chart"
     >
-      {most_ordered_chart?.map((bar, id) => (
+      {mostOrderedChart?.map((bar, id) => (
         <g key={id}>
           <circle cx="21" cy="21" r={19 - id * 2.5} fill="transparent"></circle>
           <circle
@@ -51,15 +51,15 @@ export default function MostOrderedChart({ most_ordered_chart }) {
         <circle
           cx="21"
           cy="21"
-          r={19 - most_ordered_chart.length * 2.5}
+          r={19 - mostOrderedChart.length * 2.5}
           fill="transparent"
         ></circle>
         <circle
           cx="21"
           cy="21"
-          r={19 - most_ordered_chart.length * 2.5}
+          r={19 - mostOrderedChart.length * 2.5}
           fill="transparent"
-          stroke={`#ffffff${most_ordered_chart.length % 2 ? "14" : "2b"}`}
+          stroke={`#ffffff${mostOrderedChart.length % 2 ? "14" : "2b"}`}
           strokeWidth="2.5"
         ></circle>
       </g>

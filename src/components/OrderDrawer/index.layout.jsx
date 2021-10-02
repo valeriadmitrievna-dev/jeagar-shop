@@ -9,7 +9,7 @@ import { DatePicker, Drawer } from "antd";
 
 export default function OrderDrawerLayout({
   order,
-  order_types,
+  orderTypes,
   discount,
   handleSetOrderType,
   handleChangeOrderItemCount,
@@ -149,7 +149,7 @@ export default function OrderDrawerLayout({
       <I.DrawerCloseButton onClick={handleCloseDrawer} />
       <I.StaticDrawerTitle>Order #{order.number}</I.StaticDrawerTitle>
       <O.DrawerOrderTypes>
-        {order_types.map((type, id) => (
+        {orderTypes.map((type, id) => (
           <O.DrawerOrderType
             key={id}
             active={type === order.type}

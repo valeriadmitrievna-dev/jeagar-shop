@@ -2,9 +2,6 @@ import { format } from "date-fns";
 import React from "react";
 import * as I from "../../index.styled";
 import * as D from "./index.styled";
-import { most_ordered, most_ordered_chart } from "../../constants/dashboard";
-import { info_card } from "../../constants/dashboard";
-import { order_report } from "../../constants/dashboard";
 import { ReactComponent as Cursor } from "../../assets/dashboard/Cursor.svg";
 import { ReactComponent as OptionFilter } from "../../assets/dashboard/Option.svg";
 import { ReactComponent as Arrow } from "../../assets/arrow-ios-down.svg";
@@ -13,6 +10,10 @@ import MostOrderedChart from "../../components/MostOrderedChart";
 const { Option } = Select;
 
 export default function DashboardLayout({
+  mostOrderedChart,
+  orderReport,
+  infoCards,
+  mostOrdered,
   isAllOrderedVisible,
   setAllOrderedVisible,
 }) {
@@ -27,7 +28,7 @@ export default function DashboardLayout({
             </I.PageTitle>
           </I.PageHeader>
           <D.DashboardLeftScrollContainer>
-            {info_card.map((card, id) => (
+            {infoCards.map((card, id) => (
               <D.DashboardInfoCard key={id}>
                 <D.InfoCardPercent positive={card.percent > 0}>
                   <img src={card.cover} />
@@ -64,7 +65,7 @@ export default function DashboardLayout({
                 <p>Total Payment</p>
                 <p>Status</p>
               </D.OrderReportContentTitle>
-              {order_report.map((item, id) => (
+              {orderReport.map((item, id) => (
                 <D.OrderReportitem status={item.status}>
                   <D.OrderReportitemName>
                     <img src={item.cover} alt="" />
@@ -94,8 +95,8 @@ export default function DashboardLayout({
               </Select>
             </D.MostOrderedTitle>
             <D.MostOrderedContent>
-              {most_ordered
-                .slice(0, isAllOrderedVisible ? most_ordered.length : 3)
+              {mostOrdered
+                .slice(0, isAllOrderedVisible ? mostOrdered.length : 3)
                 .map((meal, id) => (
                   <D.MostOrderedItem key={id}>
                     <img src={meal.cover} />
@@ -127,9 +128,9 @@ export default function DashboardLayout({
               </Select>
             </D.MostTypeOrderTitle>
             <D.MostTypeOrderBody>
-              <MostOrderedChart most_ordered_chart={most_ordered_chart} />
+              <MostOrderedChart mostOrderedChart={mostOrderedChart} />
               <ul>
-                {most_ordered_chart.map((bar) => (
+                {mostOrderedChart.map((bar) => (
                   <D.MostTypeOrderNote color={bar.color}>
                     <p>{bar.title}</p>
                     <span>{bar.count} customers</span>
