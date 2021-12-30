@@ -5,6 +5,7 @@ import HomeLayout from './index.layout';
 export default function Home() {
   const { dishes, orderTypes, menuTabs } = useSelector((state) => state.home);
   const [activeTab, setActiveTab] = useState(0);
+
   const discount = 0;
   const [order, setOrder] = useState({
     number: Math.floor(Math.random() * 100000),
@@ -50,6 +51,8 @@ export default function Home() {
       };
     });
   };
+
+ 
 
   return (
     <HomeLayout

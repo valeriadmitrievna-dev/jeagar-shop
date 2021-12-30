@@ -5,6 +5,7 @@ import * as H from './index.styled';
 import { Select } from 'antd';
 import { ReactComponent as Arrow } from '../../assets/arrow-ios-down.svg';
 import OrderDrawer from './../../components/OrderDrawer/index';
+import DishCard from '../../components/DIshCard/DishCard';
 
 export default function HomeLayout({
   menuTabs,
@@ -60,16 +61,7 @@ export default function HomeLayout({
           {dishes
             .filter((dish) => dish.category === menuTabs[activeTab])
             .map((dish, id) => (
-              <H.DishCard key={id} onClick={() => handleSetOrder(dish)}>
-                <img src={dish.cover} alt="" />
-                <H.DishCardContainer>
-                  <h5>{dish.title}</h5>
-                  <h2>$ {dish.price}</h2>
-                  <p>{dish.available} Bowls available</p>
-                  <h3>{dish.description}</h3>
-                  <h4>Calories: {dish.calories}</h4>
-                </H.DishCardContainer>
-              </H.DishCard>
+              <DishCard dish={dish} id={id} handleSetOrder={handleSetOrder} />
             ))}
         </H.HomeContentDishes>
       </div>
